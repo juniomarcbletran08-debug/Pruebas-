@@ -19,6 +19,8 @@ Sitio de demostración de un catálogo prémium de herramientas, desarrollado co
 
 - Catálogo adaptable con búsqueda, filtros por categoría y ordenación.
 - Fichas con marcas, modelos, referencias, características y precios de ejemplo.
+- Carrito de compra de demostración con cantidades, eliminación de productos y subtotal.
+- Pantalla de pago simulada con pestañas de tarjeta y billetera digital, datos ficticios y confirmación visual; no conecta con una pasarela ni realiza cobros.
 - Consulta por WhatsApp con datos del producto; no procesa transacciones.
 - Tema claro/oscuro y navegación adaptable a móviles.
 - Panel de demostración en `/admin` con gestión local de productos e importación de PDF mediante PDF.js.
@@ -26,6 +28,6 @@ Sitio de demostración de un catálogo prémium de herramientas, desarrollado co
 
 ## Límites
 
-Esta aplicación es exclusivamente demostrativa: no hay compras, pagos ni pedidos. Los productos, imágenes y precios son ejemplos que deben validarse y sustituirse antes de cualquier uso comercial. El panel no tiene autenticación real y guarda cambios en `localStorage`, por lo que los cambios son locales a cada navegador y no se sincronizan entre dispositivos. No introduzcas credenciales ni datos sensibles. La extracción PDF es heurística y puede requerir corrección manual.
+Esta aplicación es exclusivamente demostrativa: el carrito y la pantalla de pago son simulaciones; no hay compras, pagos reales ni pedidos. No introduzcas datos reales de tarjetas, CVV ni información bancaria. Los productos, imágenes y precios son ejemplos que deben validarse y sustituirse antes de cualquier uso comercial. El panel no tiene autenticación real y guarda cambios en `localStorage`, por lo que los cambios son locales a cada navegador y no se sincronizan entre dispositivos. No introduzcas credenciales ni datos sensibles. La extracción PDF es heurística y puede requerir corrección manual.
 
 No se considera publicada hasta verificar una URL activa de Cloudflare Pages.
