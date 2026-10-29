@@ -12,8 +12,12 @@ describe('IRONVAULT catalog seed', () => {
     expect(new Set(initialProducts.map(p => p.id)).size).toBe(initialProducts.length);
     expect(initialProducts.every(p => p.name && p.brand && p.model && p.ref && p.category && p.price >= 0)).toBe(true);
   });
-  it('uses a distinct image URL for each demo product', () => {\n    expect(new Set(initialProducts.map(p => p.image)).size).toBe(initialProducts.length);\n    expect(initialProducts.every(p => p.image.startsWith('https://'))).toBe(true);\n  });\n  it('has no hidden/unapproved products in the initial seed', () => {
+  it('uses a distinct image URL for each demo product', () => {
+    expect(new Set(initialProducts.map(p => p.image)).size).toBe(initialProducts.length);
+    expect(initialProducts.every(p => p.image.startsWith('https://'))).toBe(true);
+  });
+  it('has no hidden/unapproved products in the initial seed', () => {
     expect(initialProducts.every(p => p.approved === true)).toBe(true);
-    expect(initialProducts.every(p => p.brand.includes('Demo') || p.id.startsWith('iv-'))).toBe(true);
+    expect(initialProducts.every(p => p.brand.length > 0 && p.id.startsWith('iv-'))).toBe(true);
   });
 });
