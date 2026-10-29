@@ -3,7 +3,6 @@ import { Search, SlidersHorizontal, Sun, Moon, Menu, X, ArrowUpRight, ShieldChec
 import * as pdfjsLib from 'pdfjs-dist';
 import { categories, initialProducts, type Product } from './data';
 // PDF.js worker is served by Vite from the installed package.
-// @ts-expect-error worker module URL is supported by Vite
 import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 const WA = 'https://wa.me/51930501096';
