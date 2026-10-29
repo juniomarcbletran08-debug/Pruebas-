@@ -1,30 +1,31 @@
-# IRONVAULT MARKET
+# IRONVAULT MARKET — Demostración
 
-Marketplace demostrativo de herramientas profesionales construido con React, TypeScript y Vite.
+Sitio de demostración de un catálogo prémium de herramientas, desarrollado con React, TypeScript y Vite. No es una tienda operativa.
 
-## Desarrollo
+## Ejecutar
 
 - `npm install`
 - `npm run dev`
 - `npm test`
 - `npm run build`
 
-## Cloudflare Pages
+## Publicar en Cloudflare Pages
 
-Build command: `npm run build`; output directory: `dist`. `wrangler.toml` define el directorio de salida para Pages.
+- Comando de compilación: `npm run build`
+- Directorio de salida: `dist`
+- `wrangler.toml` configura el directorio de salida.
 
-## Funciones incluidas
+## Funciones de demostración
 
-- Catálogo adaptable con búsqueda, categorías y orden por precio/nombre.
-- Fichas de producto con marca, modelo, referencia, características y precio referencial.
-- Consulta por WhatsApp con datos del producto; no se procesan compras, pagos ni pedidos.
-- Tema claro/oscuro, vista móvil y panel de demostración en `/admin`.
-- Importación de PDF mediante PDF.js con borradores pendientes de revisión y aprobación.
+- Catálogo adaptable con búsqueda, filtros por categoría y ordenación.
+- Fichas con marcas, modelos, referencias, características y precios de ejemplo.
+- Consulta por WhatsApp con datos del producto; no procesa transacciones.
+- Tema claro/oscuro y navegación adaptable a móviles.
+- Panel de demostración en `/admin` con gestión local de productos e importación de PDF mediante PDF.js.
+- Los PDF con texto seleccionable pueden generar borradores; cada borrador requiere revisión y aprobación. Los PDF escaneados necesitan OCR, que no está incluido.
 
-## Limitaciones importantes antes de producción
+## Límites
 
-El panel administrativo de esta versión es **solo demostrativo**: no tiene autenticación segura de servidor. Los productos se guardan en `localStorage`, no en una base compartida, por lo que no se sincronizan entre dispositivos. No introduzcas credenciales ni datos sensibles. Para producción hay que integrar autenticación de servidor y persistencia Cloudflare D1/R2 mediante Pages Functions, con secretos de entorno y migraciones.
+Esta aplicación es exclusivamente demostrativa: no hay compras, pagos ni pedidos. Los productos, imágenes y precios son ejemplos que deben validarse y sustituirse antes de cualquier uso comercial. El panel no tiene autenticación real y guarda cambios en `localStorage`, por lo que los cambios son locales a cada navegador y no se sincronizan entre dispositivos. No introduzcas credenciales ni datos sensibles. La extracción PDF es heurística y puede requerir corrección manual.
 
-PDF.js extrae texto embebido; el reconocimiento de campos es heurístico, no garantiza identificar correctamente marcas, modelos o precios, y requiere verificación manual. Los PDF escaneados requieren OCR, no incluido.
-
-Las imágenes de catálogo son ilustrativas y las fichas/precios de ejemplo deben validarse antes de su uso comercial. No se ha confirmado un despliegue público.
+No se considera publicada hasta verificar una URL activa de Cloudflare Pages.
