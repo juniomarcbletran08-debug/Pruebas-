@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react';
-import { Search, SlidersHorizontal, Sun, Moon, Menu, X, ArrowUpRight, ShieldCheck, Truck, Wrench, MessageCircle, ChevronDown, Plus, Trash2, FileUp, Check, Package, LayoutDashboard, LogOut, Sparkles, SearchX } from 'lucide-react';
+import { Search, SlidersHorizontal, Sun, Moon, Menu, X, ArrowUpRight, ShieldCheck, Truck, Wrench, MessageCircle, ChevronDown, Plus, Trash2, FileUp, Check, Package, LogOut, Sparkles, SearchX } from 'lucide-react';
 import * as pdfjsLib from 'pdfjs-dist';
 import { categories, initialProducts, type Product } from './data';
 // PDF.js worker is served by Vite from the installed package.
