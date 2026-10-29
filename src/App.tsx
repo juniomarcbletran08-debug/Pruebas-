@@ -8,7 +8,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 const WA = 'https://wa.me/51930501096';
 const money = (n:number) => new Intl.NumberFormat('es-PE',{style:'currency',currency:'PEN',maximumFractionDigits:2}).format(n);
 export default function App(){
- const CATALOG_VERSION = 'catalog-2026-10-29-v2';
+ const CATALOG_VERSION = 'catalog-2026-10-29-v3';
 const loadCatalog = (): Product[] => {
  try {
   const stored = JSON.parse(localStorage.getItem('iv-products') || 'null') as Product[] | null;
