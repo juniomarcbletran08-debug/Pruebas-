@@ -8,11 +8,11 @@ describe('IRONVAULT catalog seed', () => {
     expect(categories).toContain('Repuestos y accesorios');
   });
   it('provides uniquely identified, reviewable demo products', () => {
-    expect(initialProducts.length).toBeGreaterThan(0);
+    expect(initialProducts.length).toBeGreaterThanOrEqual(20);
     expect(new Set(initialProducts.map(p => p.id)).size).toBe(initialProducts.length);
     expect(initialProducts.every(p => p.name && p.brand && p.model && p.ref && p.category && p.price >= 0)).toBe(true);
   });
   it('has no hidden/unapproved products in the initial seed', () => {
-    expect(initialProducts.every(p => p.approved === true)).toBe(true);
+    expect(initialProducts.every(p => p.approved === true)).toBe(true);\n    expect(initialProducts.every(p => p.brand.includes('Demo') || p.id.startsWith('iv-'))).toBe(true);
   });
 });
